@@ -1,0 +1,74 @@
+$white: #FFFFFF;
+$link: #8EB2C5;
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, sans-serif;
+	color: $white;
+	font-size: 14px;
+	background: #000000;
+}
+
+.hidden {
+	display: none;
+}
+
+header {
+	background-image: image-url('traffic.jpg');
+	height: 100vh;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	h1 {
+		font-size: 4rem;
+		margin: 2rem 0 .25rem 0;
+	}
+	p {
+		color: darken($white, 30%);
+		font-size: 1.25rem;
+		line-height: 1.5rem;
+		max-width: 700px;
+	}
+	a {
+		text-decoration: none;
+		color: darken($link, 10%);
+		&:hover {
+			color: $link;
+		}
+	}
+	#form {
+		margin-top: 2rem;
+		width: 600px;
+		text-align: left;
+		input[type="text"], input[type="email"], textarea {
+			width: 100%;
+			max-width: 100%;
+			height: 1.5rem;
+			border: 2px solid $link;
+			padding: .75rem;
+			margin: .5rem 0 2rem 0;
+			background: rgba(125, 125, 125, 0.7);
+			font-size: 18px;
+		}
+		input[type="submit"] {
+			outline: none;
+			background: transparent;
+			border: 2px solid darken($link, 20%);
+			color: $white;
+			padding: 1rem 2rem;
+			cursor: pointer;
+			font-size: 18px;
+		}
+		textarea {
+			min-height: 10em;
+		}
+		label {
+			letter-spacing: 1px;
+			font-size: 16px
+		}
+	}
+}
+

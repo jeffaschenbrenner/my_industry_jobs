@@ -1,0 +1,41 @@
+<header>
+	<% if notice %>
+		<div id="notice_wrapper">
+			<p class="notice"><%= notice %></p>		
+		</div>
+	<% elsif alert %>
+		<div id="notice_wrapper">
+			<p class="alert"><%= alert %></p>		
+		</div>
+	<% end %>
+  <h1>My Industry Jobs</h1>
+  <p>Whether you are looking for an exciting career opportunity or fantastic employees for your team, My Industry Jobs can fulfill your needs.</p>
+  <p>We are currently in the process of building something amazing! In the meantime please feel free to visit our <a href="https://www.facebook.com/groups/1615825188659723">facebook group</a> or get in contact with us using the form below.</p>
+	
+	<div id="form">
+
+		<%= form_for @contact do |f| %>
+			<%= f.label :name %><br>
+			<%= f.text_field :name, required: true %>
+
+			<br>
+				
+			<%= f.label :email %><br>
+			<%= f.email_field :email, required: true %>
+
+			<br>
+
+			<%= f.label :message %><br>
+			<%= f.text_area :message, as: :text %>
+
+			<div class="hidden">
+				<%= f.label :nicknamename %><br>
+				<%= f.text_field :nickname, hint: 'Leave this field blank.' %>
+			</div>
+
+			<%= f.submit 'Send Message' %>
+
+		<% end %>
+	</div>
+  
+</header>    
